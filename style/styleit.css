@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap");
+
+table,
+th,
+td {
+  border: 2px solid #000 !important;
+}
+
+table {
+  border-collapse: collapse !important;
+  width: 95% !important;
+  table-layout: fixed !important;
+}
+
+@media print {
+  table {
+    width: 96vw !important;
+    max-width: 96vw !important;
+  }
+
+  body {
+    direction: rtl !important;
+    width: 96vw !important;
+    max-width: 96vw !important;
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .cent {
+    text-align: center !important;
+  }
+}
+
+div,
+table {
+  font-family: "Scheherazade New", serif;
+}
+
+/* CSS for the index page */
+.btn-style {
+  background-color: #4caf50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 12px;
+}
+

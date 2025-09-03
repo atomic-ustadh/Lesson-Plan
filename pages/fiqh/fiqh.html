@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fiqh</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+    />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Scheherazade+New&display=swap");
+    </style>
+  </head>
+
+  <body style="font-family: 'Scheherazade New', serif; direction: rtl">
+    <form action="../fiqh/fiqhformhandle.html" method="get" id="myForm" class="mb-4">
+      <h2 class="text-2xl text-blue-900 text-center">  تحضير الدرس للفقه </h2>
+      <div class="grid grid-cols-1 gap-2 p-4 md:grid-cols-2 md:gap-4">
+        <!-- Subject Dropdown -->
+        <select
+          name="subject"
+          id="subject"
+          placeholder="Enter your subject"
+          class="border p-2 rounded w-full mb-4"
+        >
+          <option value="" disabled selected>اختر المادة</option>
+          <option>الفقه</option>
+        </select>
+        <!-- Topic, Duration, and Class Inputs -->
+        <input
+          type="text"
+          name="topic"
+          id="topic"
+          placeholder=" الموضوع "
+          class="border p-2 rounded w-full mb-4"
+        />
+        <input
+          type="text"
+          name="duration"
+          id="duration"
+          placeholder=" الزمن "
+          class="border p-2 rounded w-full mb-4"
+        />
+        <select
+          name="class"
+          id="classes"
+          class="border p-2 rounded w-full mb-4"
+        >
+          <option value="" disabled selected>اختر الصف</option>
+          <option>الروضة الأولى</option>
+          <option>الروضة الثانية</option>
+          <option>الروضة الثالثة</option>
+          <option>الأول الإبتدائي</option>
+          <option>الثاني الإبتدائي</option>
+          <option>الثالث الإبتدائي</option>
+          <option>الرابع الإبتدائي</option>
+          <option>الخامس الإبتدائي</option>
+        </select>
+        <!-- Period, Date, Age, Week, and Verse Inputs -->
+        <input
+          type="text"
+          name="period"
+          id="period"
+          placeholder=" الحصة "
+          class="border p-2 rounded w-full mb-4"
+        />
+        <input
+          type="date"
+          name="date"
+          id="date"
+          class="border p-2 rounded w-full mb-4 text-blue-900"
+        />
+        <input
+          type="text"
+          name="age"
+          id="age"
+          placeholder=" مستوى أعمار المتعلمين "
+          class="border p-2 rounded w-full mb-4"
+        />
+        <input
+          type="text"
+          name="week"
+          id="week"
+          placeholder=" الأسبوع"
+          class="border p-2 rounded w-full mb-4"
+        />
+        <input
+          type="text"
+          name="verseStart"
+          id="verseStart"
+          placeholder=" مكان البداية "
+          required
+          class="border p-2 rounded w-full mb-4"
+        />
+        <input
+          type="text"
+          name="verseEnd"
+          id="verseEnd"
+          placeholder=" مكان النهاية "
+          required
+          class="border p-2 rounded w-full mb-4"
+        />
+        <!-- Period, Date, Age, Week, and Verse Inputs -->
+        <!-- Instructional Resources -->
+        <div
+          class="grid grid-cols-2 md:grid-cols-3 w-full items-center"
+          name="resources"
+          id="resources"
+        >
+          <label class="flex items-center"
+            ><input
+              type="checkbox"
+              name="resources"
+              value="كتاب مقرر التوحيد"
+              class="mr-2"
+            />
+            كتاب مقرر التوحيد
+          </label>
+          <label class="flex items-center"
+            ><input
+              type="checkbox"
+              name="resources"
+              value="كتاب مقرر الفقه"
+              class="mr-2"
+            />
+            كتاب مقرر الفقه
+          </label>
+          <label class="flex items-center"
+            ><input
+              type="checkbox"
+              name="resources"
+              value="كتاب الحديث"
+              class="mr-2"
+            />
+            كتاب الحديث
+          </label>
+          <label class="flex items-center"
+            ><input
+              type="checkbox"
+              name="resources"
+              value="قلم السبورة"
+              class="mr-2"
+            />
+            قلم السبورة
+          </label>
+          <label class="flex items-center"
+            ><input
+              type="checkbox"
+              name="resources"
+              value="السبورة"
+              class="mr-2"
+            />
+            السبورة
+          </label>
+          <label class="flex items-center"
+            ><input
+              type="checkbox"
+              name="resources"
+              value="القرآن الكريم"
+              class="mr-2"
+            />
+            القرآن الكريم
+          </label>
+          <label class="flex items-center"
+            ><input
+              type="checkbox"
+              name="resources"
+              value="نور البيان"
+              class="mr-2"
+            />
+            نور البيان
+          </label>
+        </div>
+        <!-- Instructional Resources -->
+        <!-- Introduction and Evaluation Textareas -->
+        <textarea
+          required
+          placeholder=" التمهيد ... "
+          id="introduction"
+          name="introduction"
+          class="border p-2 rounded w-full mb-4"
+        ></textarea>
+        <textarea
+          required
+          placeholder=" التقويم...... "
+          id="evaluation"
+          name="evaluation"
+          class="border p-2 rounded w-full mb-4"
+        ></textarea>
+        <!-- Introduction and Evaluation Textareas -->
+
+        <!-- Teacher and Supervisor Comments -->
+        <textarea
+          required
+          placeholder=" ملاحظات المدرس: "
+          id="teacherComment"
+          name="teacherComment"
+          class="border p-2 rounded w-full mb-4"
+        ></textarea>
+        <textarea
+          disabled
+          placeholder=" ملاحظات المشرف: "
+          id="supervisorComment"
+          name="supervisorComment"
+          class="border p-2 rounded w-full mb-4 hidden"
+        ></textarea>
+        <!-- Teacher and Supervisor Comments -->
+      </div>
+      <!-- Assignment Input -->
+      <div class="md:col-span-2 w-full mt-2 mb-3">
+        <label class="block font-semibold mb-2 pr-3"> الواجبات </label>
+        <div id="assignmentFields" class="space-y-2">
+          <div class="flex space-x-4 assignment-item mr-3">
+            <input
+              type="text"
+              name="assignment"
+              placeholder="أدخل سؤال الواجب..."
+              id="assignment"
+              class="w-full border rounded px-2"
+            />
+            <button
+              type="button"
+              class="cancel-assignment bg-red-600 text-white rounded px-2"
+              aria-label="Cancel"
+            >
+              X
+            </button>
+          </div>
+        </div>
+        <button
+          type="button"
+          id="addAssignmentBtn"
+          class="mt-2 bg-green-600 text-white px-4 py-1 rounded hover:bg-green-700 w-md mx-auto flex items-center"
+        >
+          إضافة سؤال
+        </button>
+      </div>
+      <!--Assignment Input-->
+      <!-- Submit Button -->
+      <button
+        type="submit"
+        class="flex items-center justify-center bg-blue-500 text-white py-2 px-4 rounded mx-auto w-sm max-w-md"
+      >
+        سلم سلم سلم 😡🔫😎
+      </button>
+    </form>
+
+    <script src="../fiqh/fiqhformlogic.js"></script>
+  </body>
+</html>
