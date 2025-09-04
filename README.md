@@ -72,7 +72,8 @@ Lesson-Plan/
 
 ## Technologies Used
 - HTML5
-- CSS3 (Tailwind CSS)
+- CSS3
+- Tailwind CSS
 - JavaScript
 
 ## Author
@@ -86,6 +87,7 @@ Lesson-Plan/
 
 ## License
 MIT
+
 
 
 
