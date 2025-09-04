@@ -70,15 +70,12 @@ Lesson-Plan/
 - Edit or add lesson plans in the pages directory.
 
 ## Technologies Used
-HTML5
-CSS3 (Tailwind CSS)
-JavaScript
+- HTML5
+- CSS3 (Tailwind CSS)
+- JavaScript
 
 ## Author
 AtomicUstadh
 
 ## License
 MIT
-
-
-You can copy and paste this into your README.md. If you want me to update the file for you, let me know!
