@@ -57,24 +57,28 @@ Lesson-Plan/
 │   └── styleit.css
 
 ```
-Features
-Dynamic lesson plan generation for multiple subjects
-RTL Arabic support
-Custom and Tailwind-based styling
-Print-friendly layouts
-Modular code structure
-Getting Started
-Clone the repository.
-Open index.html in your browser.
-Edit or add lesson plans in the pages directory.
-Technologies Used
+## Features
+- Dynamic lesson plan generation for multiple subjects
+- RTL Arabic support
+- Custom and Tailwind-based styling
+- Print-friendly layouts
+- Modular code structure
+
+## Getting Started
+- Clone the repository.
+- Open index.html in your browser.
+- Edit or add lesson plans in the pages directory.
+
+## Technologies Used
 HTML5
 CSS3 (Tailwind CSS)
 JavaScript
-Author
+
+## Author
 AtomicUstadh
 
-License
+## License
 MIT
+
 
 You can copy and paste this into your README.md. If you want me to update the file for you, let me know!
