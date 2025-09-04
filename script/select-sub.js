@@ -21,6 +21,7 @@ const buttonData = [
   { label: " الحديث ", url: "./pages/hadith/hadith.html" },
   { label: " العربية", url: "./pages/arabic/arabic.html" },
   { label: " التجويد ", url: "./pages/tajweed/tajweed.html" },
+  { label: " الأذكار ", url: "./pages/adhkar/adhkar.html" },
   { label: " الحروف ", url: "./pages/huroof/huroof.html" }
 ];
 
