@@ -63,6 +63,7 @@ Lesson-Plan/
 - Custom and Tailwind-based styling
 - Print-friendly layouts
 - Modular code structure
+- Pre-Formatted Template
 
 ## Getting Started
 - Clone the repository.
@@ -76,7 +77,11 @@ Lesson-Plan/
 
 ## Author
 AtomicUstadh
+Contact me:
+[![GitHub](https://img.shields.io/badge/GitHub-100000?style=for-the-badge&logo=github&logoColor=white)](https://github.com/atomic-ustadh)
+
 
 ## License
 MIT
+
 
