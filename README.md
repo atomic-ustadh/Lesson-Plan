@@ -1,7 +1,7 @@
 # Plan A Lesson
 
 ## Project Description
-Lesson-Plan is a web-based platform for educators to create, manage, and print lesson plans in Arabic. It supports multiple subjects, dynamic form handling, and modern styling using Tailwind CSS and custom styles. The system is modular, easy to maintain, and designed for RTL (right-to-left) content.
+"Plan A Lesson" is a web-based platform for educators to create, manage, and print lesson plans in Arabic. It supports multiple subjects, dynamic form handling, and modern styling using Tailwind CSS and custom styles. The system is modular, easy to maintain, and designed for RTL (right-to-left) content.
 
 ## Folder Structure
 ```
@@ -79,3 +79,4 @@ AtomicUstadh
 
 ## License
 MIT
+
