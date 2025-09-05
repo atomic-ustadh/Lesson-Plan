@@ -3,10 +3,8 @@ function authenticate() {
     let userName = prompt("ماسمك يا أستاذ/أستاذة؟");
     if (userName) {
         document.getElementById("user").innerText = userName + "!";
-        document.getElementById("user").style.color = "green";
     } else {
         document.getElementById("user").innerText = " غير مسمى! ";
-        document.getElementById("user").style.color = "red";
     }
 }
 
@@ -32,6 +30,17 @@ buttonData.forEach(item => {
   const btn = document.createElement('button');
   btn.textContent = item.label;
   btn.onclick = () => window.open(item.url, '_self');
-  btn.classList.add("btn-style");
+  btn.classList.add(
+    "bg-blue-400",
+    "text-white",
+    "font-bold",
+    "py-3",
+    "px-6",
+    "rounded-lg",
+    "shadow-md",
+    "hover:bg-blue-800",
+    "transition",
+    "duration-300"
+  );
   container.appendChild(btn);
 });
