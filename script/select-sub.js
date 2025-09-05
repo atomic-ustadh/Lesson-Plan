@@ -18,7 +18,7 @@ const buttonData = [
   { label: " الفقه ", url: "./pages/fiqh/fiqh.html" },
   { label: " الحديث ", url: "./pages/hadith/hadith.html" },
   { label: " العربية", url: "./pages/arabic/arabic.html" },
-  { label: " التجويد ", url: "./pages/tajweed/tajweed.html" },
+  //{ label: " التجويد ", url: "./pages/tajweed/tajweed.html" },
   { label: " الأذكار ", url: "./pages/adhkar/adhkar.html" },
   { label: " الحروف ", url: "./pages/huroof/huroof.html" }
 ];
@@ -31,14 +31,13 @@ buttonData.forEach(item => {
   btn.textContent = item.label;
   btn.onclick = () => window.open(item.url, '_self');
   btn.classList.add(
-    "bg-blue-400",
+    "bg-blue-800",
     "text-white",
-    "font-bold",
     "py-3",
     "px-6",
     "rounded-lg",
     "shadow-md",
-    "hover:bg-blue-800",
+    "hover:bg-blue-950",
     "transition",
     "duration-300"
   );

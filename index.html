@@ -16,8 +16,8 @@
   <header class="bg-white shadow-sm">
     <div class="container mx-auto px-6 py-4 flex justify-between items-center">
       <div class="flex items-center">
-        <img src="./assets/logo.png" alt="Logo" loading="lazy" class="h-10 w-10 mr-3 border-2 border-gray-300 rounded-full">
-        <h1 class="text-xl font-bold text-gray-900">مخطط الدرس</h1>
+        <a href="./index.html"> <img src="./assets/logo.png" alt="Logo" loading="lazy" class="h-10 w-10 mr-3 border-2 border-gray-300 rounded-full"> </a>
+        <h1 class="text-xl font-bold text-gray-900"> <a href="./index.html"> مخطط الدرس </a> </h1>
       </div>
       <span class="text-lg text-gray-700">أهلا و سهلا يا <span id="user" class="font-bold text-blue-600"></span></span>
     </div>
@@ -29,11 +29,17 @@
       <p class="text-gray-700">اختر مادة أدناه لبدء إنشاء خطة الدرس.</p>
     </div>
     <div id="button-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+
+    <div class="text-center mt-5">
+      <h2 class="text-4xl font-bold text-gray-900 mb-3"> أو </h2>
+      <p class="text-gray-700"> ابدأ من جديددددددد </p>
+      <button onclick="location.href='./pages/new_template/new_template.html'" class="bg-indigo-600 hover:bg-indigo-800 text-white mt-7 py-3 px-6 rounded-lg shadow-md hover:bg-blue-950 transition duration-300"> ابدأ من جديد &#x2192; </button>
+    </div>
   </main>
 
-  <footer class="bg-white mt-12 py-6">
+  <footer class="bg-white mt-5 py-6">
     <div class="container mx-auto px-6 text-center text-gray-700">
-      <p> جميع الحقوق محفوظة AtomicUstadh &copy; 2025</p>
+      <p> جميع الحقوق محفوظة <a href="https://atomicustadh.pages.dev/" target="_blank">AtomicUstadh</a> &copy; 2025</p>
     </div>
   </footer>
 
