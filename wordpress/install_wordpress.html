@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Install WordPress Locally with XAMPP</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      margin: 20px;
+      background-color: #f4f4f4;
+    }
+    .container {
+      max-width: 800px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #333;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      margin: 10px 0;
+    }
+    code {
+      background: #eee;
+      padding: 2px 5px;
+      border-radius: 4px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>How to Install WordPress Locally with XAMPP</h1>
+    <p>This guide will walk you through installing WordPress on your local machine using XAMPP.</p>
+
+    <h2>Step 1: Download WordPress</h2>
+    <p>First, you need to download the latest version of WordPress from the official website.</p>
+    <p>Go to <a href="https://wordpress.org/download/" target="_blank">https://wordpress.org/download/</a> and click the button to download the .zip file.</p>
+    <img src="https://placehold.co/600x300?text=WordPress+Download+Page" alt="WordPress Download Page">
+
+    <h2>Step 2: Create a Database</h2>
+    <p>Next, you need to create a database for your WordPress installation. Open your XAMPP control panel and start the Apache and MySQL modules. The XAMPP control panel is usually at the bottom right side of your taskbar.</p>
+    <p>Then, open your browser and go to <code>http://localhost/phpmyadmin/</code>.</p>
+    <p>At the top of the page, click on the "Databases" tab, enter a name for your database (e.g., <code>wp_test_site</code>), and click "Create".</p>
+    <img src="Screenshot (21).png" alt="phpMyAdmin Create Database">
+
+    <h2>Step 3: Unzip WordPress into XAMPP's htdocs Folder</h2>
+    <p>Navigate to the folder where you installed XAMPP and find the <code>htdocs</code> directory (usually <code>c:/xampp/htdocs</code>).</p>
+    <p>Create a new folder inside <code>htdocs</code> for your WordPress site (e.g., <code>my-wordpress-site</code>).</p>
+    <p>Extract the contents of the WordPress .zip file you downloaded into this new folder.</p>
+
+    <h2>Step 4: Configure the details and Installation of Wordpress</h2>
+    <p>go to your browser and type <code> localhost:80/my-wordpress-site</code></p>
+    <p>Click on "Let's go!" button</p>
+    <img src="Screenshot (17).png" alt="WordPress Installation Page">
+    <p>Fill in the database details as follows:</p>
+    <ul>
+      <li>Database Name: <code>the name you chose in phpMyAdmin</code></li>
+      <li>Database Host: <code>localhost</code></li>
+      <li>Username: <code>root</code></li>
+      <li>Password: leave it blank</li>
+      <li>Table prefix: <code>wp_</code></li>
+    </ul>
+    <img src="Screenshot (16).png" alt="WordPress Installation Page">
+    <p>Click "Submit" and then "Run the installation".</p>
+    <img src="Screenshot (15).png" alt="WordPress Installation Page">
+
+
+    <h2>Step 5: Run the WordPress Installation</h2>
+    <p>Now you're ready to install WordPress.</p>
+    <p>On the next screen, you will be asked for your site title, admin username, password, and email. Fill in these details and click "Install WordPress".</p>
+    <p>you can choose to use the generated password or create your own. But always copy your password</p>
+    <img src="Screenshot (14).png" alt="WordPress Installation Page">
+    <p>Click "Install WordPress".</p>
+    <p>Once the installation is complete, you will see a success message. You can now log in to your new WordPress site at <code>http://localhost/my-wordpress-site/wp-admin/</code>.</p>
+    <img src="Screenshot (13).png" alt="WordPress Installation Page">
+
+    <h2>Step 6: Login to your dashboard and Start Building your website</h2>
+    <p>After a successful installation, you will see a confirmation message. Click the "Log In" button to access your WordPress admin dashboard.</p>
+    <p>use your <code>username and password</code> to login</p>
+    <img src="Screenshot (12).png" alt="WordPress Installation Page">
+    <p>enter your credentials and login</p>
+    <p>you will be redirected to the WordPress dashboard where you can start customizing your site, adding themes, plugins, and content.</p>
+    <img src="Screenshot (11).png" alt="WordPress Installation Page">
+    <p>Click on <code>view your site</code> to see what you are building</p>
+
+
+    <h2>Congratulations!</h2>
+    <p>You have successfully installed WordPress on your local machine. You can now start building your website.</p>
+  </div>
+</body>
+</html>
