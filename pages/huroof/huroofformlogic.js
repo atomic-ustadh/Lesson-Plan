@@ -22,8 +22,8 @@ document.getElementById('myForm').addEventListener('submit', function (event) {
 			.map(input => input.value)
 			.filter(value => value.trim() !== '')
 			.join(', ');
-
-		if (!subject || !topic || !duration || !classes || !period || !date || !age || !week || !verseStart || !verseEnd || !resources || !introduction || !evaluation || !teacherComment || !assignment) {
+		// All the variables with the " ! " sign are "must fill" fields
+		if (!subject || !topic || !classes || !period || !date || !age || !week ) {
 			alert("Please fill in all fields.");
 			return;
 		}

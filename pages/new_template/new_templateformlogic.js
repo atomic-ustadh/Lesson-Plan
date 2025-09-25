@@ -16,6 +16,8 @@ document.getElementById('myForm').addEventListener('submit', function (event) {
 		const verseEnd = document.getElementById("verseEnd").value;
 		const introduction = document.getElementById("introduction").value;
 		const evaluation = document.getElementById("evaluation").value;
+		const objectives = document.getElementById("objectives").value;
+		const methodologies = document.getElementById("methodologies").value;
 		const teacherComment = document.getElementById("teacherComment").value;
 		const supervisorComment = document.getElementById("supervisorComment").value;
 		const assignment = Array.from(document.querySelectorAll('#assignmentFields input[type="text"]'))
@@ -23,14 +25,14 @@ document.getElementById('myForm').addEventListener('submit', function (event) {
 			.filter(value => value.trim() !== '')
 			.join(', ');
 
-		if (!subject || !topic || !duration || !classes || !period || !date || !age || !week || !verseStart || !verseEnd || !resources || !introduction || !evaluation || !teacherComment || !assignment) {
+		if (!subject || !topic || !duration || !classes || !period || !date || !age || !week ) {
 			alert("Please fill in all fields.");
 			return;
 		}
 
 
 		// Send data to formhandle.html via URL
-		const params = new URLSearchParams({ subject, topic, duration, classes, period, date, age, week, verseStart, verseEnd, resources, introduction, evaluation, teacherComment, supervisorComment, assignment });
+		const params = new URLSearchParams({ subject, topic, duration, classes, period, date, age, week, verseStart, verseEnd, resources, introduction, evaluation, objectives, methodologies, teacherComment, supervisorComment, assignment });
 		window.location.href = `../new_template/new_templateformhandle.html?${params.toString()}`;
 	});
 
@@ -55,3 +57,13 @@ document.getElementById('myForm').addEventListener('submit', function (event) {
 			});
 		}
 	});
+
+	//This section is for the toggle logic for the resources section
+	function toggleResources() {
+		const resourcesDiv = document.getElementById('resources-hidden-div');
+		if (resourcesDiv.style.display === 'none') {
+			resourcesDiv.style.display = 'grid';
+		} else {
+			resourcesDiv.style.display = 'none';
+		}
+	}
