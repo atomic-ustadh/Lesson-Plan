@@ -26,7 +26,7 @@ document.getElementById('myForm').addEventListener('submit', function (event) {
 			.join(', ');
 
 		if (!subject || !topic || !duration || !classes || !period || !date || !age || !week ) {
-			alert("Please fill in all fields.");
+			alert("Please fill in compulsory fields.");
 			return;
 		}
 
