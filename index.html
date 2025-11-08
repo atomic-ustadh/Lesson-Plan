@@ -24,6 +24,46 @@
     </div>
   </header>
 
+  <div class="container mx-auto px-6 py-4">
+    <div class="bg-white shadow-sm rounded-lg p-4">
+      <h3 class="text-xl font-bold text-gray-900 mb-2">مفتاح Gemini API</h3>
+      <p class="text-gray-600 mb-4">Please enter your Gemini API key below. The key will be stored in your browser's local storage.</p>
+      <div class="flex items-center">
+        <input type="password" id="apiKeyInput" class="w-full px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your API key">
+        <button id="saveApiKey" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-r-md transition duration-300">Save</button>
+      </div>
+      <p id="apiKeyMessage" class="text-sm text-green-600 mt-2"></p>
+    </div>
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const apiKeyInput = document.getElementById('apiKeyInput');
+      const saveButton = document.getElementById('saveApiKey');
+      const messageElement = document.getElementById('apiKeyMessage');
+
+      // Load saved API key from localStorage
+      const savedApiKey = localStorage.getItem('geminiApiKey');
+      if (savedApiKey) {
+        apiKeyInput.value = savedApiKey;
+        messageElement.textContent = 'API Key loaded from local storage.';
+      }
+
+      saveButton.addEventListener('click', function() {
+        const apiKey = apiKeyInput.value.trim();
+        if (apiKey) {
+          localStorage.setItem('geminiApiKey', apiKey);
+          messageElement.textContent = 'API Key saved successfully!';
+          setTimeout(() => { messageElement.textContent = ''; }, 3000);
+        } else {
+          messageElement.textContent = 'Please enter a valid API key.';
+          messageElement.classList.remove('text-green-600');
+          messageElement.classList.add('text-red-600');
+        }
+      });
+    });
+  </script>
+
   <div>
     <h2 class="text-2xl font-bold text-gray-900 mb-2 text-center"><a
         href="https://github.com/atomic-ustadh/Lesson-Plan/blob/updateLogic/README.md" target="_blank">Before Use: Read the guide on how to use this
