@@ -1,98 +1,91 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>قالب خطة درس</title>
+    <link rel="stylesheet" href="./style/styleit.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lateef"
+      rel="stylesheet"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title> قالب خطة درس </title>
-  <link rel="stylesheet" href="./style/styleit.css">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Lateef" rel="stylesheet">
-</head>
-
-<body style="font-family: 'Scheherazade New', serif;" onload="authenticate();" class="bg-gray-100">
-
-  <header class="bg-white shadow-sm">
-    <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-      <div class="flex items-center">
-        <a href="./index.html"> <img src="./assets/logo.png" alt="Logo" loading="lazy"
-            class="h-10 w-10 mr-3 border-2 border-gray-300 rounded-full"> </a>
-        <h1 class="text-xl font-bold text-gray-900"> <a href="./index.html"> مخطط الدرس </a> </h1>
+  <body
+    style="font-family: 'Scheherazade New', serif"
+    onload="authenticate();"
+    class="bg-gray-100"
+  >
+    <header class="bg-white shadow-sm">
+      <div
+        class="container mx-auto px-6 py-4 flex justify-between items-center"
+      >
+        <div class="flex items-center">
+          <a href="./index.html">
+            <img
+              src="./assets/logo.png"
+              alt="Logo"
+              loading="lazy"
+              class="h-10 w-10 mr-3 border-2 border-gray-300 rounded-full"
+            />
+          </a>
+          <h1 class="text-xl font-bold text-gray-900">
+            <a href="./index.html"> مخطط الدرس </a>
+          </h1>
+        </div>
+        <span class="text-lg text-gray-700"
+          >أهلا و سهلا يا <span id="user" class="font-bold text-blue-600"></span
+        ></span>
       </div>
-      <span class="text-lg text-gray-700">أهلا و سهلا يا <span id="user" class="font-bold text-blue-600"></span></span>
-    </div>
-  </header>
+    </header>
 
-  <div class="container mx-auto px-6 py-4">
-    <div class="bg-white shadow-sm rounded-lg p-4">
-      <h3 class="text-xl font-bold text-gray-900 mb-2">مفتاح Gemini API</h3>
-      <p class="text-gray-600 mb-4">Please enter your Gemini API key below. The key will be stored in your browser's local storage.</p>
-      <div class="flex items-center">
-        <input type="password" id="apiKeyInput" class="w-full px-4 py-2 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Enter your API key">
-        <button id="saveApiKey" class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-r-md transition duration-300">Save</button>
+    <div>
+      <h2 class="text-2xl font-bold text-gray-900 mb-2 text-center">
+        <a
+          href="https://github.com/atomic-ustadh/Lesson-Plan/blob/updateLogic/README.md"
+          target="_blank"
+          >Before Use: Read the guide on how to use this lesson plan tool
+          here</a
+        >
+      </h2>
+    </div>
+
+    <main class="container mx-auto px-6 py-12">
+      <div class="text-center mb-10">
+        <h2 class="text-4xl font-bold text-gray-900 mb-2">المواد</h2>
+        <p class="text-gray-700">اختر مادة أدناه لبدء إنشاء خطة الدرس.</p>
       </div>
-      <p id="apiKeyMessage" class="text-sm text-green-600 mt-2"></p>
-    </div>
-  </div>
+      <div
+        id="button-container"
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"
+      ></div>
 
-  <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      const apiKeyInput = document.getElementById('apiKeyInput');
-      const saveButton = document.getElementById('saveApiKey');
-      const messageElement = document.getElementById('apiKeyMessage');
+      <div class="text-center mt-5">
+        <h2 class="text-4xl font-bold text-gray-900 mb-3">أو</h2>
+        <p class="text-gray-700">ابدأ من جديددددددد</p>
+        <button
+          onclick="location.href='./pages/new_template/new_template.html'"
+          class="bg-indigo-600 hover:bg-indigo-800 text-white mt-7 py-3 px-6 rounded-lg shadow-md hover:bg-blue-950 transition duration-300"
+        >
+          ابدأ من جديد &#x2192;
+        </button>
+      </div>
+    </main>
 
-      // Load saved API key from localStorage
-      const savedApiKey = localStorage.getItem('geminiApiKey');
-      if (savedApiKey) {
-        apiKeyInput.value = savedApiKey;
-        messageElement.textContent = 'API Key loaded from local storage.';
-      }
+    <footer class="bg-white mt-5 py-6">
+      <div class="container mx-auto px-6 text-center text-gray-700">
+        <p>
+          جميع الحقوق محفوظة
+          <a href="https://atomicustadh.pages.dev/" target="_blank"
+            >AtomicUstadh</a
+          >
+          &copy; 2025
+        </p>
+      </div>
+    </footer>
 
-      saveButton.addEventListener('click', function() {
-        const apiKey = apiKeyInput.value.trim();
-        if (apiKey) {
-          localStorage.setItem('geminiApiKey', apiKey);
-          messageElement.textContent = 'API Key saved successfully!';
-          setTimeout(() => { messageElement.textContent = ''; }, 3000);
-        } else {
-          messageElement.textContent = 'Please enter a valid API key.';
-          messageElement.classList.remove('text-green-600');
-          messageElement.classList.add('text-red-600');
-        }
-      });
-    });
-  </script>
-
-  <div>
-    <h2 class="text-2xl font-bold text-gray-900 mb-2 text-center"><a
-        href="https://github.com/atomic-ustadh/Lesson-Plan/blob/updateLogic/README.md" target="_blank">Before Use: Read the guide on how to use this
-        lesson plan tool here</a></h2>
-  </div>
-
-  <main class="container mx-auto px-6 py-12">
-    <div class="text-center mb-10">
-      <h2 class="text-4xl font-bold text-gray-900 mb-2"> المواد </h2>
-      <p class="text-gray-700">اختر مادة أدناه لبدء إنشاء خطة الدرس.</p>
-    </div>
-    <div id="button-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
-
-    <div class="text-center mt-5">
-      <h2 class="text-4xl font-bold text-gray-900 mb-3"> أو </h2>
-      <p class="text-gray-700"> ابدأ من جديددددددد </p>
-      <button onclick="location.href='./pages/new_template/new_template.html'"
-        class="bg-indigo-600 hover:bg-indigo-800 text-white mt-7 py-3 px-6 rounded-lg shadow-md hover:bg-blue-950 transition duration-300">
-        ابدأ من جديد &#x2192; </button>
-    </div>
-  </main>
-
-  <footer class="bg-white mt-5 py-6">
-    <div class="container mx-auto px-6 text-center text-gray-700">
-      <p> جميع الحقوق محفوظة <a href="https://atomicustadh.pages.dev/" target="_blank">AtomicUstadh</a> &copy; 2025</p>
-    </div>
-  </footer>
-
-  <script src="./script/select-sub.js"></script>
-</body>
-
+    <script src="./script/select-sub.js"></script>
+  </body>
 </html>
